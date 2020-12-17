@@ -1,0 +1,37 @@
+html,body{
+  width:100%;
+  height:100%;
+  background-color: #f1f0ee; /*off white*/
+  font-family:'Montserrat', sans-serif;
+}
+.gameGrid{
+  display:inline-grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(3,1fr);
+  gap: 20px;
+  padding:30px;
+  width: 80%;
+  height: 60%;
+  justify-content: space-around;
+  border: 2px solid grey;
+  border-radius:30px;
+}
+.cardsEnglish,.cardsSpanish{
+  border: 2px solid grey;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 14pt;
+}
+.cardsEnglish{
+  background-color: #8EC3A5;
+  box-shadow: 2px 2px #143723;
+}
+.cardsSpanish{
+  background-color: #89AC77;
+  box-shadow: 2px 2px #143723;
+}
+input:focus{
+  outline: none;
+}

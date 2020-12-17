@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Card Game</title>
+  </head>
+  <body>
+    <script src="../js/cardGame.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div id="header">
+      <img src="../resources/logoA.png" alt="Logo" id="logo">
+      <div id="brandName">
+        Simply Fluent
+      </div>
+      <div id="slogan">
+        Fun. Fast. Fluent.
+      </div>
+    </div>
+    <div class="nav">
+      <a href="../html/index.html" class="navItem" id="firstNav">Home</a>
+      <a href="../html/topics.html" class="navItem" id="middleNavItem">Topics</a>
+      <a href="../html/login.html" class="navItem"> Login/ Signup</a>
+    </div>
+
+    <!--hidden div that will pop up using javascript at end of game -->
+    <div id="popUpContainer"></div>
+    <div id="popUpWindow">
+      <div id="popUpBox" class="popUp">
+        <p id="resultTitle">Well Done!<br/></p>
+        You've matched them all.<br/>
+        Come back every day to revise your new phrases.<br/>
+        <p id="resultScore">
+          9 / 9<br/>
+        <button id="closePopUpBtn" onclick="closePopUp()">Close</button>
+        </p>
+      </div>
+    </div>
+    <!-- end of pop up section -->
+    <div class="gameProgressBar">
+      <div id="gameProgress">
+        <span id="progressSpan"> 0 / 9 Complete </span>
+      </div>
+    </div>
+    </div>
+    <div class="gameGrid">
+      <input id="engCard0" type="text" value="E0" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsEnglish">
+      <input id="engCard1" type="text" value="E1" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsEnglish">
+      <input id="engCard2" type="text" value="E2" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsEnglish">
+      <div>&nbsp;</div>
+      <input id="spanCard0" type="text" value="S0" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsSpanish">
+      <input id="spanCard1" type="text" value="S1" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsSpanish">
+      <input id="spanCard2" type="text" value="S2" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsSpanish">
+
+
+      <input id="engCard3" type="text" value="E3" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsEnglish">
+      <input id="engCard4" type="text" value="E4" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsEnglish">
+      <input id="engCard5" type="text" value="E5" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsEnglish">
+      <div>&nbsp;</div>
+      <input id="spanCard3" type="text" value="S3" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsSpanish">
+      <input id="spanCard4" type="text" value="S4" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsSpanish">
+      <input id="spanCard5" type="text" value="S5" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsSpanish">
+
+      <input id="engCard6" type="text" value="E6" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsEnglish">
+      <input id="engCard7" type="text" value="E7" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsEnglish">
+      <input id="engCard8" type="text" value="E8" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsEnglish">
+      <div>&nbsp;</div>
+      <input id="spanCard6" type="text" value="S6" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsSpanish">
+      <input id="spanCard7" type="text" value="S8" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsSpanish">
+      <input id="spanCard8" type="text" value="S9" onclick="checkIfCardsMatch(this.id)" readonly class = "cardsSpanish">
+    </div><!--gameGrid div -->
+
+  </body>
+</html>

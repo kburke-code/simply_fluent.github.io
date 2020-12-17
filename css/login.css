@@ -1,0 +1,108 @@
+html,body{
+  width:100%;
+  height:100%;
+  font-family:'Montserrat', sans-serif;
+  background-image: linear-gradient(to bottom, #0b5f6e, #197d89, #2b9ca3, #40bcbc);
+}
+#header{
+  margin:0;
+  height:30%;
+  width:100%;
+  left:0;
+  padding:20px 20px 5px 20px;
+  font-weight:500;
+}
+#logo{
+  width:6%;
+  height:auto;
+  margin-left:47%; /*47% | 6% | 47%  =100% account for logo width */
+}
+#brandName{
+    font-size:22pt;
+    color:#f1f0ee;
+    text-shadow:1px 1px #024352;
+}
+#slogan{
+  font-style: italic;
+  font-size:14pt;
+   color:#f1f0ee; /*off white*/
+}
+#brandName,#slogan{
+  width: 20%;
+  text-align:center;
+  margin-left: 40%;
+  font-weight: 600;
+  text-shadow:0.5px 0.5px #024352;
+}
+#slogan{
+  padding-top:2%;
+}
+#main{
+  display:flex;
+  margin-top:3%;
+  border:2px solid #024352; /*dark blue */
+  width:60%;
+  height:60%;
+  margin-left: 20%; /* 20%left | 60% main | 20% =100%*/
+  border-radius: 22px;
+}
+#createAccountDiv,#signInDiv{
+  height:100%;
+  width:50%;
+}
+#signInDiv{
+  background-color:#f1f0ee; /*off white*/
+  border-radius:0px 20px 20px 0px;
+}
+#createAccountDiv{
+  background-color:#024352; /*dark blue */
+  border-radius:20px 0px 0px 20px;
+}
+#createAccTitle,#signInTitle{
+  text-align: center;
+  padding:5%;
+  margin-bottom:3%;
+  width:90%; /*100-5 padding each side so 10% padding.*/
+  font-size: 14pt;
+  font-weight: 500;
+}
+#createAccTitle{
+  color: #f1f0ee; /*off white*/
+}
+#signInTitle{
+  color:#024352; /*dark blue */
+}
+.signUpLoginInput{
+  height:10%;
+  width:70%;
+  margin-left:15%;
+  margin-bottom:4%;
+  padding:5px 0px 5px 10px;
+  border:1px solid #024352; /*dark blue */
+  color:#024352; /*dark blue */
+}
+::placeholder{
+  color:#024352; /*dark blue */
+}
+#signUpSubmit,#loginSubmit{
+  margin-top:11%;
+  margin-left:15%;
+  width:70%;
+  padding:3%;
+  border-radius: 5px;
+  border-style: none;
+  font-size: 12pt;
+}
+#signUpSubmit{
+color:#024352;
+margin-top:8%;
+}
+#loginSubmit{
+  background-color:#024352; /*dark blue */
+  color: #f1f0ee; /*off white*/
+}
+.signUpLoginInput:focus{
+  outline:none;
+  border-color: #ffcc00;
+  box-shadow: 1px 1px 3px #ffcc00; /*last 3px is the amount of blur, others are horizonal offset and vertical offset*/
+}

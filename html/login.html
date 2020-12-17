@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="loginHtml">
+  <head>
+    <meta charset="utf-8">
+    <title>Login or Signup</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../js/login.js"></script>
+    <div id="loginHeader">
+      <a href="../html/index.html" id="logoHome">
+      <img src="../resources/logoA.png" alt="" id="logo">
+    </a>
+      <div id="brandName">
+        Simply Fluent
+      </div>
+      <div id="slogan">
+        Fun. Fast. Fluent.
+      </div>
+    </div>
+    <div id="main">
+      <div id="createAccountDiv">
+        <div id="createAccTitle">Create an Account</div>
+        <form name="signUpForm" action="#" method="post" id="signUpForm">
+          <input type="text" placeholder="Full name" id="signUpFullName" class="signUpLoginInput">
+          <input type="email" placeholder="Email" id="signUpEmail" class="signUpLoginInput">
+          <!-- password patter
+            ?= positive lookahead: so it will look ahead through the expression and check if theres any pattern that matches the params.
+            /d digits 0-9
+          (lookahead 1 to many capitals)(lookahead 1 to many lower case)(lookahead 1 to many digits) totaling at least 8 chars but can be more-->
+          <input type="password" name="password" placeholder="New Password" id="signUpPassword" class="signUpLoginInput"
+            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}" title="8 or more characters. At least one number, one upper case, and one lower case character.">
+          <input type="password" name="confirmPass" placeholder="Confirm Password" id="signUpConfirmPass"class="signUpLoginInput">
+          <button type="submit" id="signUpSubmit" onclick="return validateSignUp()">Create Account</button>
+        </form>
+      </div>
+      <div id="signInDiv">
+        <div id="signInTitle">Sign In</div>
+          <form name="loginForm" id="loginForm" action="../html/index.html" onsubmit="return validateLogin()" method="post">
+            <input type="email" name="loginEmail" placeholder="Email" id="loginEmail" class="signUpLoginInput" autofocus>
+            <input type="password" name="loginPassword" placeholder="Password" id="loginPassword" class="signUpLoginInput"
+              pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}" title="8 or more characters. At least one number, one upper case, and one lower case character.">
+            <button type="submit" id="loginSubmit" value="SignIn" onclick="return validateLogin()">Sign In</button>
+          </form>
+      </div>
+  </div>
+  </body>
+</html>

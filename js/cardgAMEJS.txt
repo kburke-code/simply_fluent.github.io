@@ -1,0 +1,134 @@
+JAVASCRIPT COMMENTED OUT CODE MOVED HERE
+
+
+/*
+function checkIfCardsMatch(currentElement){//func start
+  if(waitFlag === "continue"){//if 1
+    if(timesClicked === 0){ //if its the first card (of a pair)to be clicked
+      document.getElementById(currentElement).style.border = "4px solid green";
+      firstCardElement = currentElement;
+      timesClicked++;
+    }//if 2
+    else{//its the second card picked out of a pair
+        waitFlag = "wait";
+        //gets last character of the first and second cards id
+        var firstClicked = firstCardElement[firstCardElement.length - 1];
+        var secondClicked = currentElement[currentElement.length - 1];
+
+        //if cards are a match BUT are not the same card clicked twice
+        if(firstClicked == secondClicked && currentElement != firstCardElement){
+          document.getElementById(currentElement).style.border = "4px solid green";
+          score++;
+          var hideMatchedCard1 =
+          setTimeout(function(){$("#"+currentElement).css("visibility", "hidden")},1000);
+          setTimeout(function(){$("#"+firstCardElement).css("visibility", "hidden")},1000);
+          var setWaitFlag = setTimeout(function(){
+            waitFlag = "continue";},1000);
+
+          }
+        else{//cards dont match or the same card has been selected twice
+          document.getElementById(currentElement).style.border = "4px solid red";
+          document.getElementById(firstCardElement).style.border = "4px solid red";
+          var changeBorderBackNormal =
+          setTimeout(function(){
+            document.getElementById(firstCardElement).style.border = "2px solid grey";
+            },1000);
+          setTimeout(function(){
+            document.getElementById(currentElement).style.border = "2px solid grey";
+          },1000);
+          setTimeout(function(){
+            waitFlag = "continue";
+          },1000);
+        }
+        /*once second card is picked, regardsless of whether its a match or not the timesClicked value is reset
+        so that another card can be selected to begin pairing process
+      timesClicked = 0;
+    }//else 2
+  }//if 1
+}//function end
+*/
+
+/*
+var englishWords = [
+
+  "The woman","I am","You are",
+  "He is","She is","Goodbye",
+  "Thank you","Good night","Good Day",
+  "Sorry","You're Welcome","Pardon me?",
+  "Excuse me","Nice to meet you","My name is",
+  "Please","English","Spanish"
+];
+var spanishWords = [
+
+  "La mujer","Yo soy","T\u00FA eres", //Tú eres
+  "\u00C9l es","Ella es","Adi\u00F3s",//Él es, Adiós
+  "\u00A1Gracias!","\u00A1Buenos noches! ","\u00A1Buenos d\u00EDas", //¡Gracias!, ¡Buenos noches!, ¡Buenos días!
+  "Lo siento","De nada","\u00BFPerd\u00F3n?", //¿Perdón?
+  "Discuple","Mucho gusto","Me llama",
+  "Por favor","Ingl\u00E9s","Espa\u00F1ol"//Inglés, Español
+];
+["I am","Yo soy"],
+["You are","T\u00FA eres"],   //Tú eres
+["He is","\u00C9l es"],       //Él es
+["She is","Ella es"],
+["Goodbye","Adi\u00F3s"],   //Adiós
+["Thank you","\u00A1Gracias!"],
+["Good night","\u00A1Buenos noches!"],
+["Good Day","\u00A1Buenos d\u00EDas"],
+["Sorry","Lo siento"],
+["You're Welcome","De nana"],
+["Pardon me?","\u00BFPerd\u00F3n?"],  //¿Perdón?
+["Excuse me","Discuple"],
+["Nice to meet you","Mucho gusto"],
+["My name is","Me llama"],
+["Please","Por favor"],
+["English","Ingl\u00E9s"],  //Inglés
+["Spanish","Espa\u00F1ol"]  // Español
+];
+////CODE A ////=============
+/*
+engElementId += count;
+temporaryVal = englishWords[changeIndex];
+englishWords[changeIndex] = englishWords[i];
+englishWords[i] = temporaryVal;
+engElementId = "engCard";
+
+spanElementId += count;
+temporaryVal2 = spanishWords[changeIndex];
+spanishWords[changeIndex] = spanishWords[i];
+spanishWords[i] = temporaryVal2;
+spanElementId = "spanCard";
+
+count++;
+
+//CODE B==============:
+//window.onload = testing;
+/*
+//CHECKS CARDS ARE EQUAL..WORKING
+window.onload = testing;
+function testing(){
+  var arr =[
+    ["The boy","El ni\u00F1o"],
+    ["The girl","La ni\u00F1a"],
+    ["The man","El hombre"],
+    ["The woman","La mujer"]
+  ];
+  var arr2=["The girl","El ni\u00F1o"];
+  var result = arr[1][0];
+  var firstCard = "The girl";
+  var secondCard = "La ni\u00F1a";
+ // document.getElementById("engCard0").value = girl;
+  for(let i = 0; i < 4; i++){
+    for(let j = 0; j < 2; j++){
+     // console.log(arr[i][j]);
+
+      if(arr[i][j]== firstCard){
+        console.log(arr[i][j+1]);
+        if(arr[i][j+1] == secondCard)
+          {
+            console.log("equal");
+          }
+      }
+    }
+  }
+}*/
